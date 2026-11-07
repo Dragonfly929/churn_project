@@ -1,6 +1,6 @@
 """RTAP service: alert -> choose an action -> act -> observe -> learn -> measure.
 
-Consumes bank.alerts (group 'rtap') and bank.outcomes; publishes bank.offers.
+Consumes bank.alerts (group 'rtap') and bank.outcomes (group 'rtap-out'); publishes bank.offers.
 Policy = Thompson Sampling per (reason x offer); constraints = daily capacity and budget from the
 control panel; ethical rule = the offer depends only on the reason (never gender/age/country);
 marketing opt-out = service call only; human in the loop = overrides from the control panel.
@@ -29,7 +29,7 @@ def main():
     run_id = info.get("run_id", "manual")
     bus = get_bus(a.bus, a.bootstrap)
     c_alerts = bus.consumer("bank.alerts", f"rtap-{run_id}")
-    c_out = bus.consumer("bank.outcomes", f"rtap-{run_id}")
+    c_out = bus.consumer("bank.outcomes", f"rtap-out-{run_id}")   # own group: two topics in one group make Kafka rebalance endlessly
     ts = ThompsonSampler()
     per_day: dict[str, int] = {}
     spent = saved = lost = offers = no_capacity = 0

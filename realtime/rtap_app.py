@@ -88,7 +88,7 @@ def live():
         st.subheader("Topics, offsets, consumer groups and lag")
         rid = info.get("run_id", "manual")
         groups = {"bank.events": [f"scorer-{rid}", f"river-{rid}"], "bank.alerts": [f"rtap-{rid}"],
-                  "bank.offers": [f"world-{rid}"], "bank.outcomes": [f"rtap-{rid}"]}
+                  "bank.offers": [f"world-{rid}"], "bank.outcomes": [f"rtap-out-{rid}"]}
         try:
             st.dataframe(pd.DataFrame(get_bus(bus_kind).stats(groups)), width="stretch", hide_index=True)
         except Exception as e:  # noqa: BLE001
