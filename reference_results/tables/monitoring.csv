@@ -1,0 +1,10 @@
+month_cutoff,clients,churn_rate,roc_auc,recall,max_psi,feature_max_psi,shap_top5,recall_gap_age,shap_top5_jaccard_vs_training,RETRAIN?
+2025-07-31,4646,0.05510116229014206,0.8172787051537586,0.59375,0.3842781641662061,days_since_last_msg,"nps_score, balance_change_3m, nps_missing, num_products, days_since_last_msg",0.16666666666666663,1.0,yes
+2025-08-31,4673,0.08153220629146159,0.863637225332854,0.7244094488188977,0.19354150117433822,balance_change_3m,"nps_score, balance_change_3m, nps_missing, num_products, days_since_last_msg",0.16610675625233295,1.0,no
+2025-09-30,4682,0.11020931225971807,0.8857912614855588,0.7616279069767442,0.14509072180228183,balance_change_3m,"nps_score, balance_change_3m, nps_missing, num_products, days_since_last_msg",0.1428571428571429,1.0,no
+2025-10-31,4559,0.12436937924983549,0.8817016749548479,0.763668430335097,0.08415895966296841,balance_change_3m,"nps_score, balance_change_3m, nps_missing, num_products, days_since_last_msg",0.14479638009049767,1.0,no
+2025-11-30,4402,0.1392548841435711,0.9054770032768507,0.7748776508972267,0.027417964333635726,balance_change_3m,"nps_score, balance_change_3m, nps_missing, num_products, days_since_last_msg",0.1285516285516286,1.0,no
+2025-12-31,4213,0.16330405886541657,0.9500927758535379,0.8488372093023255,0.0006593541955831333,tx_count_90d,"nps_score, balance_change_3m, nps_missing, num_products, days_since_last_msg",0.06023915545104319,1.0,no
+2026-01-31,3979,0.13445589344056297,0.9178704397190833,0.8280373831775701,0.01151864481091542,balance_change_3m,"balance_change_3m, nps_score, nps_missing, num_products, days_since_last_msg",0.10412440838404335,1.0,no
+2026-02-28,3789,0.11348640802322513,0.9290050333363334,0.8372093023255814,0.0371123642584338,tx_trend,"balance_change_3m, nps_score, nps_missing, num_products, days_since_last_msg",0.10612244897959178,1.0,no
+2026-03-31,3525,0.07602836879432624,0.9006239145079026,0.7052238805970149,0.10022803165195102,balance_change_3m,"nps_score, balance_change_3m, nps_missing, num_products, days_since_last_msg",0.06999999999999995,1.0,no

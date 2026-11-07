@@ -1,0 +1,3 @@
+,missing,share,why / decision
+nps_score,2554,0.6062188464277237,NOT at random: silent clients do not answer the survey -> kept as nps_missing flag
+credit_score,128,0.03038215048658913,completely at random (CRM glitch) -> median imputation inside the pipeline

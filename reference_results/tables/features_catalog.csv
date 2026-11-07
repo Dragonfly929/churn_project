@@ -1,0 +1,29 @@
+feature,group,type,formula,source,why
+age,profile,discrete,floor((cutoff - birth_date)/365.25),dim_client.birth_date,life stage; SENSITIVE attribute
+gender,profile,nominal,as recorded,dim_client.gender,SENSITIVE attribute (fairness check only)
+country,profile,nominal,as recorded,dim_client.country,SENSITIVE attribute; regional competition
+tenure_months,profile,discrete,floor((cutoff - join_date)/30.44),dim_client.join_date,new clients leave more easily
+credit_score,profile,continuous,last monthly snapshot,fact_account_month.credit_score,financial health
+num_products,profile,discrete,last monthly snapshot,fact_account_month.num_products,1 product = weak tie; 3-4 = over-selling
+has_card,profile,binary,last monthly snapshot,fact_account_month.has_card,card = daily touchpoint
+is_active_member,profile,binary,>=4 transactions in the month,fact_account_month.is_active_member,engagement
+est_salary,profile,continuous,last monthly snapshot,fact_account_month.est_salary,client value
+balance,profile,continuous,last monthly snapshot,fact_account_month.balance,money kept at the bank
+balance_change_3m,behaviour,continuous,(bal_t - bal_t-3)/bal_t-3,fact_account_month.balance,money being moved out
+tx_count_90d,behaviour,discrete,"count tx in (cutoff-90, cutoff]",fact_transaction,current activity
+tx_count_prev_90d,behaviour,discrete,"count tx in (cutoff-180, cutoff-90]",fact_transaction,previous activity (baseline)
+tx_trend,behaviour,continuous,(tx_90d+1)/(tx_prev_90d+1),fact_transaction,fading activity (gradual fade)
+amount_in_90d,behaviour,continuous,sum in-amounts 90d,fact_transaction.amount,salary moved to another bank
+amount_out_90d,behaviour,continuous,sum out-amounts 90d,fact_transaction.amount,money drain
+net_flow_90d,behaviour,continuous,in - out 90d,fact_transaction.amount,money drain
+digital_share_90d,behaviour,continuous,digital tx / all tx 90d,fact_transaction + dim_channel.is_digital,channel habit; PROXY for age
+msg_count_180d,voice,discrete,messages in 180d,fact_feedback,the client still talks to the bank
+complaints_180d,voice,discrete,complaints in 180d,fact_feedback.is_complaint,dissatisfaction (vocal leaver)
+neg_msg_180d,voice,discrete,negative messages (denoised sentiment),fact_feedback.is_negative,dissatisfaction
+avg_sentiment_180d,voice,continuous,mean sentiment of non-empty messages,fact_feedback.sentiment_score,tone of the relationship
+days_since_last_tx,silence,discrete,cutoff - last tx date (365 if none),fact_transaction,silence in payments
+days_since_last_msg,silence,discrete,cutoff - last message date (365 if none),fact_feedback,silence in contact
+no_feedback_6m,silence,binary,msg_count_180d = 0,fact_feedback,the client stopped talking
+nps_score,silence,ordinal,"last answered NPS (0-10), NULL if not answered",fact_survey.nps_score,satisfaction when spoken
+nps_missing,silence,binary,last survey not answered,fact_survey.answered_date_key,missing NOT at random = silence
+silent_decline,silence,binary,tx_trend < 0.5 AND no_feedback_6m,derived,silent exit pattern

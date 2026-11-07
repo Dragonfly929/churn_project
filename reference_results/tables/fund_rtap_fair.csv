@@ -1,0 +1,6 @@
+index,card_cashback,deposit_bonus,fee_waiver,personal_call
+gender=F,0.131,0.087,0.287,0.495
+gender=M,0.121,0.081,0.273,0.525
+country=MD,0.144,0.08,0.277,0.499
+country=RO,0.103,0.08,0.262,0.554
+country=UA,0.094,0.107,0.329,0.47

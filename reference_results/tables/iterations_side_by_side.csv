@@ -1,0 +1,30 @@
+item,#1 iteration 1,#2 iteration 2,#3 iteration 3
+reason for change,"baseline: all features incl. sensitive attributes, cost-optimal threshold","iteration 1 failed ['Fairness: max recall gap (age/gender/country)', 'F2c max PSI (drift) external']: removed age/gender/country (non-discrimination) and digital_share_90d (proxy for age AND the feature drifting on the external branch)",iteration 2 failed ['M1 recall of leavers']: one threshold for all clients = the cheapest one whose out-of-fold recall is at least 0.74 (contract 0.70 + safety margin)
+model,gb,gb,gb
+balancing,none,none,none
+n features,28,24,24
+sensitive attributes used,"age, gender, country",none,none
+per-group thresholds,False,False,False
+threshold,0.19,0.2,0.15
+recall,0.703,0.638,0.725
+precision,0.664,0.672,0.535
+roc_auc,0.893,0.888,0.888
+expected_cost,112810.0,115060.0,114220.0
+recall gap age_group,0.136,0.022,0.016
+recall gap country,0.036,0.057,0.08
+recall gap gender,0.029,0.049,0.016
+Jaccard top-5 (F1),0.722,1.0,1.0
+external AUC,0.904,0.906,0.906
+external SHAP rank corr (F2),0.993,0.999,0.999
+SHAP top-5,"balance_change_3m, nps_score, nps_missing, num_products, age","balance_change_3m, nps_score, nps_missing, num_products, days_since_last_msg","balance_change_3m, nps_score, nps_missing, num_products, days_since_last_msg"
+[contract] M1 recall of leavers,PASS,FAIL,PASS
+[contract] M2a ROC-AUC,PASS,PASS,PASS
+[contract] M2b expected cost vs no model (EUR),PASS,PASS,PASS
+[contract] Fairness: max recall gap (age/gender/country),FAIL,PASS,PASS
+[contract] Leakage alarm: AUC suspiciously high,PASS,PASS,PASS
+[contract] F1 XAI stability (Jaccard top-5),PASS,PASS,PASS
+[contract] F2a external SHAP rank correlation,PASS,PASS,PASS
+[contract] F2b external ROC-AUC,PASS,PASS,PASS
+[contract] F2c max PSI (drift) external,FAIL,PASS,PASS
+[contract] Data contract (input validity),PASS,PASS,PASS
+VERDICT,FAIL,FAIL,PASS

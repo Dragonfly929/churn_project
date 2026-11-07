@@ -1,0 +1,5 @@
+reason,offer,posterior_mean,trials,expected_gain
+disengagement,card_cashback,0.2692307692307692,24,219.23076923076923
+dissatisfaction,fee_waiver,0.41,198,370.0
+money_withdrawal,personal_call,0.35080645161290325,246,325.80645161290323
+silence,personal_call,0.3669724770642202,107,341.9724770642202

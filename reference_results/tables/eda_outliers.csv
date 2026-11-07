@@ -1,0 +1,22 @@
+feature,outliers_3IQR,outliers_z4,churn_rate_among_outliers,decision
+avg_sentiment_180d,1457,0,0.1633493479752917,keep; robust models + scaling
+neg_msg_180d,818,47,0.24938875305623473,"KEEP: outliers concentrate leavers = signal, not error"
+complaints_180d,615,53,0.2861788617886179,"KEEP: outliers concentrate leavers = signal, not error"
+balance,131,52,0.12213740458015267,keep; robust models + scaling
+tx_trend,123,54,0.13821138211382114,keep; robust models + scaling
+days_since_last_tx,106,33,0.4716981132075472,"KEEP: outliers concentrate leavers = signal, not error"
+msg_count_180d,83,43,0.7228915662650602,"KEEP: outliers concentrate leavers = signal, not error"
+balance_change_3m,63,36,0.7301587301587301,"KEEP: outliers concentrate leavers = signal, not error"
+amount_out_90d,37,20,0.7027027027027027,"KEEP: outliers concentrate leavers = signal, not error"
+est_salary,31,26,0.25806451612903225,"KEEP: outliers concentrate leavers = signal, not error"
+tx_count_prev_90d,14,14,0.21428571428571427,keep; robust models + scaling
+tx_count_90d,14,20,0.14285714285714285,keep; robust models + scaling
+net_flow_90d,6,18,0.6666666666666666,"KEEP: outliers concentrate leavers = signal, not error"
+amount_in_90d,5,19,0.6,"KEEP: outliers concentrate leavers = signal, not error"
+credit_score,0,0,,keep; robust models + scaling
+tenure_months,0,0,,keep; robust models + scaling
+age,0,0,,keep; robust models + scaling
+num_products,0,0,,keep; robust models + scaling
+digital_share_90d,0,0,,keep; robust models + scaling
+days_since_last_msg,0,0,,keep; robust models + scaling
+nps_score,0,0,,keep; robust models + scaling

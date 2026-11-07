@@ -1,0 +1,36 @@
+# Core (tested with Python 3.12 and 3.13 on Ubuntu)
+numpy>=1.26
+pandas>=2.2
+scipy>=1.11
+scikit-learn>=1.5
+imbalanced-learn>=0.12
+matplotlib>=3.8
+joblib>=1.3
+tabulate>=0.9
+
+# XAI + fairness
+shap>=0.45
+lime>=0.2.0.1
+fairlearn>=0.10
+
+# Database (SQLite is built in; PostgreSQL through psycopg 3)
+SQLAlchemy>=2.0
+psycopg[binary]>=3.1
+
+# App + dashboard
+streamlit>=1.50
+plotly>=5.22          # interactive charts in both apps
+pyarrow>=14
+
+# Streaming
+kafka-python>=2.2
+pyspark>=3.5          # includes Spark; needs Java 17 or 21
+river>=0.21           # online learning (idea of app_river.py)
+
+# Teacher's basic producer (realtime/teacher/main_KAFKAPRODUSER.py)
+psutil>=5.9
+
+# ---------------- OPTIONAL (both pull PyTorch, about 1-2 GB) ----------------
+# The project runs fully without them; each has a built-in fallback that is used automatically.
+#   pip install sdv                    # Experiment B with SDV GaussianCopula (fallback: own Gaussian copula)
+#   pip install sentence-transformers  # text embeddings for the PCA lab (fallback: TF-IDF + SVD)

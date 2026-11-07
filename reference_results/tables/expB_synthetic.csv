@@ -1,0 +1,2 @@
+source,method,mean_KS,mean_abs_corr_diff,AUC train-real/test-real (TRTR),AUC train-synthetic/test-real (TSTR),median DCR synthetic->real,median real->real NN distance,share synthetic closer than 5th pct real NN
+simulated bank,own Gaussian copula (pip install sdv for the SDV version),0.013827307412596967,0.01804006250578489,0.6480674289280012,0.5045331914034541,0.6483605280811233,0.6628552077533979,0.057

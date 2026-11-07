@@ -1,0 +1,3 @@
+index,Predicted: stays,Predicted: leaves
+Actually stays,0 €,60 € (useless offer)
+Actually leaves,1000 € (lost client),60 € + 65%·1000 € = 710 €

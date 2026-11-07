@@ -1,0 +1,16 @@
+source_system,table,column,type,allowed_values,update_frequency,exists_since
+core banking,core_clients,client_id,integer,"unique, > 0",once,2010
+core banking,core_clients,birth_date,date,age 18-100 at cutoff,once,2010
+core banking,core_clients,gender,char(1),F / M,once,2010
+core banking,core_clients,country,char(2),MD / RO / UA,once,2010
+core banking,core_clients,join_date,date,<= today,once,2010
+core banking,core_accounts_monthly,balance,"numeric(16,2)",0 - 1e8,monthly,2025-01
+core banking,core_accounts_monthly,num_products,smallint,1 - 4,monthly,2025-01
+core banking,core_accounts_monthly,credit_score,"numeric(6,1)","300 - 900, NULL allowed",monthly,2025-01
+core banking,core_exits,exit_date,date,> join_date,event,2025-01
+cards/payments,card_transactions,amount,"numeric(14,2)",> 0,real time,2025-01
+cards/payments,card_transactions,direction,text,in / out,real time,2025-01
+cards/payments,card_transactions,channel,text,mobile_app/web/card_pos/atm/branch/transfer,real time,2025-01
+contact centre,contact_messages,text,text,"free text, may be empty",real time,2025-01
+contact centre,contact_messages,complaint_flag,smallint,0 / 1,real time,2025-01
+survey,survey_responses,nps_score,smallint,"0 - 10, NULL = not answered",quarterly,2025-03

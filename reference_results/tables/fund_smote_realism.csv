@@ -1,0 +1,11 @@
+check,value
+num_products: share of synthetic values that are not integers,0.579295154185022
+has_card: share of synthetic values that are not integers,0.4193832599118943
+is_active_member: share of synthetic values that are not integers,0.41145374449339206
+no_feedback_6m: share of synthetic values that are not integers,0.46740088105726874
+nps_missing: share of synthetic values that are not integers,0.38502202643171807
+silent_decline: share of synthetic values that are not integers,0.05726872246696035
+complaints_180d: share of synthetic values that are not integers,0.4418502202643172
+tx_count_90d: share of synthetic values that are not integers,0.9678414096916299
+median distance synthetic -> nearest real leaver (std units),1.8209923201279614
+median distance real leaver -> nearest other real leaver,3.7575653179644872

@@ -1,0 +1,10 @@
+id,judges,KPI,formula,target,source
+M1,model,Recall-ul clienților care pleacă (la pragul ales),TP / (TP + FN),>= 0.70,set de test
+M2,model,Cost așteptat vs. fără model; ROC-AUC,FN·1000€ + FP·60€ + TP·(60€ + 0.65·1000€),cost < fără model; AUC >= 0.80,set de test
+F1,features,Stabilitatea explicațiilor (top-5 SHAP),Jaccard mediu al top-5 între reantrenări,>= 0.60,5 reantrenări (seed/bootstrap)
+F2,features,Robustețea pe date externe,corelația Spearman a importanțelor SHAP intern vs extern; PSI per feature,rho >= 0.80; PSI < 0.20,filiala externă
+B1,business,Rata churn,plecați în 90 zile / clienți activi la cutoff,monitorizare,query Stage 1
+B2,business,Ponderea plecărilor tăcute,plecați tăcuți / toți plecații,monitorizare,query Stage 1
+B3,business,Lead time,zile între alertă și plecare (mediană),>= 30 zile,streaming
+B4,business,ROI campanie,valoare reținută / cost oferte,> 1,RTAP
+B5,business,Fairness gap,max - min recall între grupuri,<= 0.10,set de test

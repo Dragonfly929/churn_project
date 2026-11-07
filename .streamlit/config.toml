@@ -1,0 +1,32 @@
+# Theme shared by both apps (run streamlit from the project folder so it is picked up).
+# Colours from the project's palette inspiration; text/background kept high-contrast (not faded).
+[theme]
+base = "light"
+primaryColor = "#8A2A78"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F5EFF8"
+textColor = "#252A34"
+linkColor = "#0C7B93"
+borderColor = "#E1D5EA"
+showWidgetBorder = true
+baseFontSize = 17
+baseRadius = "0.6rem"
+metricValueFontSize = "2.3rem"
+headingFontWeights = [800, 700, 650, 600, 600, 600]
+dataframeHeaderBackgroundColor = "#F0E6F4"
+chartCategoricalColors = ["#1A8FB0", "#FF2E63", "#7469B6", "#2E9E6E", "#B04A98", "#E07B39", "#3E6FD0", "#B88A10"]
+chartSequentialColors = ["#E6F7F9", "#C6EBF0", "#9FDCE5", "#6FC6D6", "#3FAEC4", "#1A8FB0", "#16759A", "#1B5C82", "#1E4468", "#142850"]
+chartDivergingColors = ["#1A8FB0", "#4FA9C4", "#8AC4D6", "#C2DEE7", "#F2F0F4", "#F7D0DA", "#FBA3B8", "#FD6A8D", "#FF2E63", "#C81E4C"]
+
+[theme.sidebar]
+backgroundColor = "#290044"
+secondaryBackgroundColor = "#3D0B5C"
+textColor = "#F3EBC8"
+primaryColor = "#FFD38B"
+borderColor = "#5B2A7C"
+
+[client]
+toolbarMode = "viewer"   # no Deploy button
+
+[server]
+headless = false

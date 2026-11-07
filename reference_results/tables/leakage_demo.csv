@@ -1,0 +1,3 @@
+index,roc_auc,recall,top_feature,top_feature_share,top3
+correct cutoff,0.8929283585157776,0.7536231884057971,balance_change_3m,0.1950245535255872,"balance_change_3m, nps_score, nps_missing"
+WRONG cutoff (leakage),1.0,1.0,balance,1.0,"balance, age, tenure_months"

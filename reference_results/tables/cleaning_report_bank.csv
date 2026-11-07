@@ -1,0 +1,16 @@
+table,rule,rows_affected,decision
+core_clients,duplicate client_id,0,keep first row
+core_clients,country name variants,0,map to ISO-2 code (MD/RO/UA)
+core_clients,impossible age (<18 or >100),0,set birth_date NULL (age missing)
+core_clients,drop full_name (GDPR data minimisation),5000,column removed
+core_accounts_monthly,comma decimal separator,0,convert to dot decimal
+core_accounts_monthly,impossible balance (>1e8),0,set NULL
+core_accounts_monthly,"duplicate (client, month)",0,keep first
+core_accounts_monthly,missing credit_score,2301,keep NULL; imputed later inside the model pipeline (median)
+card_transactions,duplicate tx_id,0,keep first (same transaction twice)
+card_transactions,date as dd.mm.yyyy text,0,parse with dayfirst
+card_transactions,amount missing or <= 0,0,drop row
+contact_messages,empty message,491,"keep the row (contact happened), flag is_empty, no sentiment"
+contact_messages,garbled text (encoding errors),0,treat as empty
+contact_messages,"text denoising (typos, diacritics, sarcasm)",12802,text_clean + sentiment_score; raw kept as sentiment_raw for comparison
+survey_responses,survey not answered (NULL score),14806,keep NULL: missing NOT at random -> feature nps_missing (silence)

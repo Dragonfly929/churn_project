@@ -1,0 +1,6 @@
+mode,alerts,leavers_in_window,caught_before_exit,recall_before_exit,median_lead_days,share_lead>=30d,false_alarms (never leave),precision
+streaming daily + EWMA,1645,688,611,0.8880813953488372,39.0,0.5494186046511628,807,0.5094224924012158
+"streaming daily, no smoothing",1812,688,612,0.8895348837209303,39.0,0.5552325581395349,969,0.4652317880794702
+monthly batch (same daily capacity),1460,688,607,0.8822674418604651,40.0,0.5552325581395349,666,0.5438356164383562
+streaming daily + EWMA | only leavers NOT flagged at the cutoff,1645,104,87,0.8365384615384616,44.0,0.5961538461538461,807,0.5094224924012158
+monthly batch (same daily capacity) | only leavers NOT flagged at the cutoff,1460,104,76,0.7307692307692307,41.5,0.5192307692307693,666,0.5438356164383562

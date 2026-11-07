@@ -1,0 +1,9 @@
+condition,weight,feature
+balance_change_3m <= -0.01,0.4842729436655109,balance_change_3m
+nps_score <= 7.00,0.11638931543285327,nps_score
+neg_msg_180d <= 0.00,-0.09682446433364167,neg_msg_180d
+0.00 < nps_missing <= 1.00,0.04788789947754825,nps_missing
+silent_decline <= 0.00,-0.0442020720081918,silent_decline
+days_since_last_msg > 334.75,0.0363109975629847,days_since_last_msg
+days_since_last_tx > 7.00,0.03462715933573885,days_since_last_tx
+num_products <= 1.00,0.025030066931380067,num_products

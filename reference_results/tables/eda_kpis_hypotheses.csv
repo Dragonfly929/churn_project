@@ -1,0 +1,6 @@
+KPI / hypothesis,value
+B1 churn rate (90d),0.16330405886541657
+B2 share of silent leavers,0.4898255813953488
+share of silent clients overall,0.2831711369570377
+H1 churn rate silent vs not,0.282 vs 0.116 (chi2 p=3.01e-39) -> H1 SUPPORTED
+tx_trend leavers vs stayers (Mann-Whitney p),2.06e-10

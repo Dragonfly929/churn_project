@@ -1,0 +1,6 @@
+L1 (Lasso),L2 (Ridge),ElasticNet a=0.5
+nps_missing,nps_missing,nps_missing
+balance_change_3m,balance_change_3m,balance_change_3m
+nps_score,nps_score,nps_score
+neg_msg_180d,neg_msg_180d,neg_msg_180d
+no_feedback_6m,no_feedback_6m,no_feedback_6m

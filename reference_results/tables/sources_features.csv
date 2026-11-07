@@ -1,0 +1,4 @@
+source,L1 keeps (C=0.02),SHAP top-5
+simulated bank,"age, balance, is_active_member","num_products, age, balance, is_active_member, est_salary"
+external branch,,"balance, age, num_products, est_salary, credit_score"
+learned synthetic,"age, is_active_member","age, balance, credit_score, est_salary, tenure_months"

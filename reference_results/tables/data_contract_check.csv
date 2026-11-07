@@ -1,0 +1,10 @@
+rule,pass
+client_id unique,True
+age in 18-100,True
+"gender in {F,M}",True
+"country in {MD,RO,UA}",True
+num_products in 1-4,True
+balance >= 0,True
+nps_score in 0-10,True
+missing share per feature < 40% (except nps_score),True
+churn is 0/1,True

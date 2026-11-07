@@ -1,0 +1,11 @@
+requirement,threshold,measured,pass,verdict
+M1 recall of leavers,>= 0.70,0.6376811594202898,False,FAIL
+M2a ROC-AUC,>= 0.80,0.8875321204645904,True,PASS
+M2b expected cost vs no model (EUR),< 138000,115060.0,True,PASS
+Fairness: max recall gap (age/gender/country),<= 0.10,0.05650542118432034,True,PASS
+Leakage alarm: AUC suspiciously high,< 0.97,0.8875321204645904,True,PASS
+F1 XAI stability (Jaccard top-5),>= 0.60,1.0,True,PASS
+F2a external SHAP rank correlation,>= 0.80,0.9991304347826085,True,PASS
+F2b external ROC-AUC,>= 0.80,0.9060693404955701,True,PASS
+F2c max PSI (drift) external,< 0.20,0.02293971576716534,True,PASS
+Data contract (input validity),all rules pass,1.0,True,PASS
